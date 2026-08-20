@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <rect width="980" height="360" fill="#ffffff"/>
+  <text x="30" y="36" font-size="17" font-weight="700" fill="#1a1a2e">기사 작성 흐름</text>
+
+  <defs>
+    <marker id="e" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- 장면 1: 기자가 읽고 골라 담는다 -->
+  <rect x="40" y="60" width="280" height="230" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <g transform="translate(40,60)">
+    <!-- 뒤 신문 -->
+    <rect x="34" y="34" width="86" height="106" rx="5" fill="#ffffff" stroke="#93c5fd" transform="rotate(-6 77 87)"/>
+    <!-- 앞 신문 -->
+    <rect x="46" y="30" width="90" height="112" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="56" y1="46" x2="126" y2="46" stroke="#2563eb" stroke-width="4"/>
+    <g stroke="#cbd5e1" stroke-width="2.5">
+      <line x1="56" y1="60" x2="126" y2="60"/><line x1="56" y1="72" x2="126" y2="72"/>
+      <line x1="56" y1="96" x2="126" y2="96"/><line x1="56" y1="108" x2="126" y2="108"/><line x1="56" y1="120" x2="110" y2="120"/>
+    </g>
+    <!-- 고른 구절(강조) -->
+    <rect x="52" y="78" width="80" height="12" rx="3" fill="#fef3c7" stroke="#f59e0b"/>
+    <line x1="56" y1="84" x2="126" y2="84" stroke="#b45309" stroke-width="2.5"/>
+    <!-- 가위 -->
+    <g fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round" transform="translate(138,68) scale(1.1)">
+      <circle cx="6" cy="6" r="2.8"/><circle cx="6" cy="18" r="2.8"/>
+      <line x1="20" y1="4" x2="8.2" y2="15.8"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="8.2" y1="8.2" x2="12" y2="12"/>
+    </g>
+    <!-- 발췌 조각 → 발췌함 -->
+    <path d="M 140 100 C 165 118 175 128 187 138" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#e)"/>
+    <!-- 발췌함(열린 상자) -->
+    <path d="M182 150 L254 150 L246 186 L190 186 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <path d="M182 150 L172 138 L244 138 L254 150 Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="204" y="128" width="34" height="14" rx="3" fill="#fef3c7" stroke="#f59e0b" transform="rotate(-8 221 135)"/>
+    <text x="218" y="204" text-anchor="middle" font-size="11.5" fill="#475569">발췌함</text>
+  </g>
+  <text x="180" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">기자가 원문을 읽고 구절만 담는다</text>
+  <text x="180" y="336" text-anchor="middle" font-size="11.5" fill="#64748b">1건 1,000자 · 매체당 1,200자 관문</text>
+
+  <line x1="330" y1="175" x2="368" y2="175" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#e)"/>
+
+  <!-- 장면 2: AI가 발췌만 근거로 쓴다 -->
+  <rect x="372" y="60" width="280" height="230" rx="14" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+  <g transform="translate(372,60)">
+    <!-- 로봇 -->
+    <line x1="70" y1="52" x2="70" y2="40" stroke="#059669" stroke-width="2.5"/>
+    <circle cx="70" cy="36" r="4.5" fill="#059669"/>
+    <rect x="34" y="52" width="72" height="58" rx="12" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <circle cx="56" cy="76" r="6.5" fill="#059669"/>
+    <circle cx="84" cy="76" r="6.5" fill="#059669"/>
+    <path d="M58 95 Q70 102 82 95" stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- 입력: 발췌 조각만 -->
+    <rect x="26" y="130" width="46" height="16" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
+    <rect x="34" y="152" width="46" height="16" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="53" y="186" text-anchor="middle" font-size="11.5" fill="#475569">입력은 발췌뿐</text>
+    <path d="M 88 140 C 110 140 118 120 124 108" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#e)"/>
+    <!-- 초안 문서 -->
+    <rect x="140" y="42" width="112" height="150" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <line x1="152" y1="62" x2="240" y2="62" stroke="#059669" stroke-width="4"/>
+    <g stroke="#cbd5e1" stroke-width="2.5">
+      <line x1="152" y1="80" x2="240" y2="80"/><line x1="152" y1="94" x2="222" y2="94"/>
+      <line x1="152" y1="122" x2="240" y2="122"/><line x1="152" y1="136" x2="240" y2="136"/>
+      <line x1="152" y1="164" x2="228" y2="164"/>
+    </g>
+    <g font-size="10.5" font-weight="700" fill="#b45309">
+      <rect x="152" y="100" width="60" height="13" rx="3" fill="#fef3c7" stroke="#f59e0b"/>
+      <text x="222" y="110">[1]</text>
+      <rect x="152" y="142" width="72" height="13" rx="3" fill="#fef3c7" stroke="#f59e0b"/>
+      <text x="234" y="152">[2]</text>
+    </g>
+  </g>
+  <text x="512" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">AI가 발췌만 근거로 초안을 쓴다</text>
+  <text x="512" y="336" text-anchor="middle" font-size="11.5" fill="#64748b">인용마다 [N] 근거 번호 · 발췌 없으면 생성 실패</text>
+
+  <line x1="662" y1="175" x2="700" y2="175" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#e)"/>
+
+  <!-- 장면 3: 사람이 검토하고 발행한다 -->
+  <rect x="704" y="60" width="280" height="230" rx="14" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <g transform="translate(704,60)">
+    <!-- 검토 문서 -->
+    <rect x="30" y="38" width="104" height="140" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <line x1="42" y1="58" x2="122" y2="58" stroke="#7c3aed" stroke-width="4"/>
+    <g stroke="#cbd5e1" stroke-width="2.5">
+      <line x1="42" y1="76" x2="122" y2="76"/><line x1="42" y1="90" x2="106" y2="90"/>
+      <line x1="42" y1="118" x2="122" y2="118"/><line x1="42" y1="132" x2="114" y2="132"/>
+    </g>
+    <g stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M100 70 L106 76 L118 62"/>
+      <path d="M100 112 L106 118 L118 104"/>
+    </g>
+    <!-- 돋보기 -->
+    <g fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round">
+      <circle cx="118" cy="140" r="20" fill="#f5f3ff" fill-opacity="0.6"/>
+      <line x1="133" y1="155" x2="150" y2="172"/>
+    </g>
+    <path d="M 160 120 C 185 110 195 100 205 90" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#e)"/>
+    <!-- 발행: 종이비행기 -->
+    <g fill="#ffffff" stroke="#7c3aed" stroke-width="2.2" stroke-linejoin="round" transform="translate(200,42) scale(1.6)">
+      <path d="M22 2 L11 13"/><path d="M22 2 L15 22 L11 13 L2 9 Z"/>
+    </g>
+    <g stroke="#c4b5fd" stroke-width="2" stroke-linecap="round">
+      <line x1="196" y1="112" x2="216" y2="100"/><line x1="204" y1="126" x2="228" y2="112"/>
+    </g>
+    <text x="234" y="160" text-anchor="middle" font-size="11.5" fill="#475569">발행</text>
+  </g>
+  <text x="844" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">사람이 대조·검토하고 발행한다</text>
+  <text x="844" y="336" text-anchor="middle" font-size="11.5" fill="#64748b">인용 원문 대조 · 총량 검사 · 데스크 승인</text>
+</svg>
